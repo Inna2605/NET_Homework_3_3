@@ -31,15 +31,7 @@ namespace NET_Homework_3_3
         public string Email { get; set; }
         public int Area { get; set; }
 
-        public Shop()
-        {
-            Name = null;
-            Address = null;
-            Description = null;
-            Phone = null;
-            Email = null;
-            Area = 0;
-        }
+        public Shop() { }
         public Shop(string name, string address, string description, string phone, string email, int area)
         {
             Name = name;
@@ -112,6 +104,10 @@ namespace NET_Homework_3_3
         public static bool operator >(Shop shop1, Shop shop2)
         {
             return shop1 > shop2;
+        }
+        public static bool Equals(Shop shop1, Shop shop2)
+        {
+            return shop1 != shop2;
         }
     }
 }
